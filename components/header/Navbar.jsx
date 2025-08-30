@@ -10,6 +10,7 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
@@ -27,7 +28,9 @@ const Navbar = () => {
 
           {/** Account management */}
           <div className='flex items-center space-x-2'>
-          <Button><Plus/>Create</Button>
+            <Link href="/upload">
+              <Button><Plus/>Create</Button>
+            </Link>
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
               <SignInButton>
