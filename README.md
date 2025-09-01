@@ -40,9 +40,15 @@ npm install
 ### 3️⃣ Set up environment variables
 Create a `.env` file in the root directory and add your database and Clerk credentials:
 ```env
-DATABASE_URL=your_postgres_database_url
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+DATABASE_URL=
+
+-- {imagekit.io}
+
+NEXT_PUBLIC_PUBLIC_KEY=
+PRIVATE_KEY=
+NEXT_PUBLIC_URL_ENDPOINT=
 ```
 
 ### 4️⃣ Set up the database
