@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
 }
 
 datasource db {
@@ -15,23 +14,22 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  clerkUserId String   @unique
-  email     String   @unique
-  name      String?
+  id String @id @default(cuid())
+  clerkUserId String @unique
+  name String
+  email String
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  shorts    Short[]
+  updateAt DateTime @updatedAt
+  shorts Shorts[]
 }
 
-model Short {
-  id        String   @id @default(cuid())
-  userId    String
-  title     String
+model Shorts {
+  id String @id @default(cuid())
+  title String 
   description String
-  url       String
+  url String
+  userId String
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  user     User @relation(fields: [userId], references: [id])
+  updateAt DateTime @updatedAt
+  user User @relation(fields: [userId], references: [id])
 }
